@@ -28,3 +28,29 @@ newContainer.appendChild(p2Text);
 container.appendChild(pText);
 container.appendChild(headerBlue);
 container.appendChild(newContainer);
+
+//second event method script
+const btn = document.querySelector('#btn');
+btn.onclick = () => alert('Hello World');
+
+//third event method script
+const btn3 = document.querySelector('#btn3');
+btn3.addEventListener('click', () => {
+    alert('Hello World');
+})
+
+//named function event listener | METHOD 1
+function alertFunction() {
+    alert('YAY! YOU DID IT!');
+}
+
+// METHOD 2 -- NOTE lowercase 'c' on the 'onclick'
+// btn4.onclick = alertFunction; 
+
+// METHOD 3
+// btn4.addEventListener('click', alertFunction);
+
+// event properties and abilities practice section
+btn4.addEventListener('click', function (e) {
+    e.target.style.background = 'blue';
+})
